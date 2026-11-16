@@ -1,0 +1,11 @@
+dtls_server: listening on udp/11111, certs /Users/nikhilpothuganti/Desktop/pqc-dtls/certs/mldsa44, 1 KEM group(s)
+
+[conn 0] client 192.168.1.50:11112
+[conn 0] handshake OK in 4827.7 ms (wall)
+[conn 0]   version DTLSv1.3, cipher TLS13-CHACHA20-POLY1305-SHA256, group ML_KEM_512
+[conn 0]   client authenticated: CN=riscv-iot-device
+[conn 0]   rx 20 B: "hello from RISC-V #0"
+[conn 0]   rx 20 B: "hello from RISC-V #1"
+[conn 0]   rx 20 B: "hello from RISC-V #2"
+[conn 0]   bulk: 67200 B in 48 records over 2310.3 ms (wall)
+[conn 0] closed after 3 messages, 60 bytes echoed

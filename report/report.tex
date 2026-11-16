@@ -1,0 +1,206 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.7cm,top=1.5cm,bottom=1.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue!50!black,citecolor=black}
+\setlist{itemsep=1pt,topsep=2pt,parsep=0pt,leftmargin=1.2em}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\newcommand{\M}{\,M}
+\renewcommand{\arraystretch}{1.05}
+
+\title{\vspace{-0.6cm}\textbf{Post-Quantum DTLS 1.3 with Mutual Authentication\\on a Bare-Metal RISC-V IoT Device}\\[2pt]
+\large Inter IIT Tech Meet 14.0 --- QTrino Labs problem statement --- Technical Report}
+\author{Nikhil Pothuganti, IIT Kanpur}
+\date{\vspace{-0.9cm}}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+We built a DTLS~1.3 client for the provided LiteX/VexRiscv SoC (RV32IM, 4\,KB direct-mapped I- and
+D-caches, simulated cycle-accurately with Verilator) and a host server, both on wolfSSL~5.8.4.
+The device runs bare metal with our own interrupt-driven Ethernet/ARP/IPv4/UDP layer on the LiteEth MAC.
+\begin{itemize}
+  \item \textbf{Key exchange:} ML-KEM-512 (FIPS~203). It is the only group offered, with no classical fallback.
+  \item \textbf{Authentication:} ML-DSA-44 (FIPS~204) certificates on \emph{both} sides. The server requires a client
+    certificate, the device verifies the server's chain and hostname, and certificate validity dates are checked.
+  \item \textbf{Records:} \texttt{TLS\_CHACHA20\_POLY1305\_SHA256}, with a HelloRetryRequest cookie against DoS amplification.
+\end{itemize}
+All cycle counts are read from the RISC-V \texttt{cycle} CSR. Times in ms assume a 100\,MHz clock.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Metric (25 consecutive sessions, all successful) & Median & p90 & Min & Max \\
+\midrule
+DTLS 1.3 handshake (\texttt{wolfSSL\_connect}) & \textbf{12.44\M cyc = 124\,ms} & 15.9\M & 10.4\M & 35.7\M$^{a}$ \\
+Full session establishment (context setup + handshake) & \textbf{13.89\M cyc = 139\,ms} & 17.4\M & 11.9\M & 37.2\M \\
+\quad ML-DSA-44 sign (device CertificateVerify) & 4.43\M & 7.75\M & 2.80\M & 27.4\M \\
+\quad ML-DSA-44 verify (server CertificateVerify) & 2.52\M & & & \\
+\quad ML-KEM-512 keygen + decapsulation & 0.57\M\ + 0.88\M & & & \\
+\quad Waiting on the network (inside the handshake) & 0.10\M & & & \\
+Post-handshake throughput (48 records $\times$ 1400\,B) & \textbf{86 cyc/B = 1.14\,MB/s} & & & \\
+ROM (\texttt{boot.bin}) / static RAM (.data+.bss) & \textbf{271.5\,KB} / 30.6\,KB & & & \\
+Peak heap / peak stack & \textbf{98.5\,KB}$^{b}$ / 2.1\,KB & & & \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\footnotesize $^{a}$ML-DSA signing repeats a random number of times (rejection sampling; 4.25 tries on average for
+ML-DSA-44). The maximum needed about 30 tries. Excluding the signature, the handshake is a stable ${\approx}8$\M\ cycles.
+$^{b}$A \texttt{LOWMEM=1} build signs with wolfSSL's small-memory ML-DSA (61\,KB heap) at about $2\times$ the average signing time.
+\caption{Final measurements (\texttt{scripts/measure.sh}, \texttt{results/measure\_20261116\_155400/}).}
+\end{table}
+
+\section{Architecture and integration}
+\begin{itemize}
+\item \textbf{Firmware.} \texttt{dtls\_client.c} drives wolfSSL through user I/O callbacks over our UDP layer
+  (\texttt{net.c}).
+  \begin{itemize}
+    \item The Ethernet ISR copies each frame out of the MAC's two hardware RX slots into a 16-frame ring and answers
+      ARP itself. Without that, the host's neighbour entry expired during long PQC computations and the kernel held
+      back our packets.
+    \item Time comes from the cycle counter. Entropy is a hook (\texttt{wolf\_port.c}) feeding wolfCrypt's Hash-DRBG
+      (see Limitations).
+    \item The device credentials are a CA certificate, the server certificate, and the device certificate and key.
+      They are embedded as DER, and the key is in expanded-only form, so no key generation runs at load.
+  \end{itemize}
+\item \textbf{Configuration.} wolfSSL is set up entirely in \texttt{user\_settings.h}, with every option justified
+  in comments. Changes outside wolfSSL's configuration: two small, documented patches to \texttt{dilithium.c}
+  (Sec.~\ref{sec:opt}) and one \texttt{INCLUDE} line in the kit's linker script.
+\item \textbf{Server.} The host server (native wolfSSL) requires and verifies the client certificate.
+  It exports TLS secrets, so the capture decrypts completely in Wireshark/tshark~$\geq$4.4:
+  CertificateRequest, both Certificate and CertificateVerify messages, Finished, ACK and the application data
+  are all visible (\texttt{results/capture\_final/}).
+\end{itemize}
+
+\textbf{Bring-up issues and their root causes.} Each of these is useful to know for this platform.
+\begin{enumerate}[label=(\arabic*)]
+  \item VexRiscv traps on misaligned accesses and LiteX's handler loops silently. We found this with our own trap
+    catcher; the fix is \texttt{WOLFSSL\_USE\_ALIGN}.
+  \item Under DTLS~1.3 on a slow client, stale ACKs triggered endless fast retransmits. The fix is a larger
+    record-number history and a 4\,s initial timer, as RFC~7925 recommends for constrained nodes.
+  \item wolfSSL~5.8.4 bug: compiling out ML-KEM-1024 breaks ML-KEM-512 group support (a misplaced \texttt{break}).
+  \item \texttt{dtls13.c} does not build without AES.
+  \item AES on RISC-V defaults to cache-line ``touching'', which took 79\% of the cycles.
+\end{enumerate}
+
+\section{Optimisation}\label{sec:opt}
+Every step was measured with the same harness. One clean build plus one session is logged to
+\texttt{results/bench\_log.txt}, per-primitive microbenchmarks have known-answer tests (\texttt{BENCH=1}), and
+PC-sampling profiles come from a timer interrupt.
+
+The key platform fact: with \textbf{4\,KB direct-mapped caches}, code size \emph{is} speed.
+\begin{itemize}
+  \item \texttt{-O2} made the handshake slower: setup went from 5.7 to 14.0\M\ cycles, because the I-cache thrashed.
+  \item Several later wins came from memory layout rather than instruction count.
+\end{itemize}
+
+\begin{table}[h]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xrrr@{}}
+\toprule
+Step (cumulative) & Handshake & Bulk & ROM \\
+\midrule
+First working build: AES-256-GCM-SHA384, \texttt{-Os} & 58--70\M & 744 cyc/B & 424\,KB \\
+AES-128-GCM-SHA256 (SHA-384 is 64-bit arithmetic on RV32; AES-128 has 10 rounds) & 40.0\M & 584 & 403 \\
+4-bit GHASH table instead of bit-serial GF($2^{128}$) multiply & 36.3\M & 361 & 404 \\
+Network: no D-cache flush in ISR (MAC buffers are uncached I/O), 50\,ms gap ACK (RFC~9147 \S7.1), no IPv6 on tap & 29.0\M & 365 & 405 \\
+Expanded-only ML-DSA key (OpenSSL's seed+key PKCS\#8 made wolfSSL re-run keygen): setup 5.8$\to$2.3\M & 26.5\M & 356 & 404 \\
+ChaCha20-Poly1305: 87 vs.\ 320 cyc/B for AES-GCM (T-tables fill the whole D-cache); also constant-time & 25.6\M & 117 & 405 \\
+Word-wise \texttt{memcpy}/\texttt{memset} via linker \texttt{--wrap} (picolibc is built \texttt{-Os}: byte loops) & 24.6\M & 89 & 406 \\
+Keccak-f[1600] as explicit 32-bit lane halves, one fused round (23.1k$\to$16.2k cyc) & $\approx$20\M$^{c}$ & 87 & 403 \\
+\texttt{-ffunction-sections}+GC, release config, one parameter set, no session cache (BSS 81$\to$26\,KB) & & 86 & \textbf{260} \\
+Pinned server certificate: skips the CA-signature verify (CertificateVerify is still checked) & & & 267 \\
+PQC-tuned layout: padded ML-DSA scratch buffers (they aliased in the D-cache; sign $-8\%$) & & & \\
+PQRV RV32IM assembly~[1]: Keccak (15.2k cyc) and ML-DSA NTT (15.1k vs.\ 35k); signatures byte-identical & \textbf{12.4\M}$^{d}$ & \textbf{86} & 271 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2pt}
+\footnotesize $^{c}$From this point single-run totals are dominated by the random number of ML-DSA signing tries. Changes were compared with per-operation timers and fixed-seed microbenchmarks.
+$^{d}$Median of 25 sessions.
+\caption{Optimisation steps and their measured effect (cycles, single sessions unless noted).}
+\end{table}
+
+\textbf{Things we tried and rejected (all measured):}
+\begin{itemize}
+  \item Global or per-file \texttt{-O2} on SHA-3, ML-DSA or SHA-256: all slower because of the I-cache.
+  \item AES small tables: 1.8$\times$ slower.
+  \item wolfSSL's SHA-3 variants.
+  \item Signed-Montgomery rewrite of 241 call sites: +15\%, a code-layout effect.
+  \item A custom SHA-256: only $-4\%$, because it is instruction-bound and the handshake must hash ${\approx}26$\,KB.
+  \item \texttt{ASSIGN\_KEY}: it breaks verification.
+  \item ML-DSA's \texttt{SIGN\_CHECK\_Y/W0}: not FIPS~204-conformant.
+\end{itemize}
+
+\textbf{Memory.} The heap peak is inside ML-DSA signing: 44\,KB of TLS state plus 51\,KB for the signer's
+matrix $A$ and vectors. wolfSSL's low-memory signer brings the peak to 61\,KB at a $2\times$ average signing cost,
+so we ship it as a build option.
+
+\textbf{Where the cycles go.} This is a median session (12.44\M\ cycles). The PQC operations come from
+per-operation timers, SHA-256 from PC sampling.
+
+\begin{center}\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Component & Cycles & Share \\
+\midrule
+ML-DSA-44 sign (device CertificateVerify; random number of tries) & 4.43\M & 36\% \\
+ML-DSA-44 verify (server CertificateVerify) & 2.52\M & 20\% \\
+SHA-256: transcript over ${\approx}$17\,KB of PQC handshake messages, plus ${\approx}$30 HKDF/HMAC derivations & ${\approx}$2.2\M & 18\% \\
+ML-KEM-512 decapsulation (keygen, 0.57\M, is done during context setup) & 0.88\M & 7\% \\
+ChaCha20-Poly1305 records, X.509/ASN.1 parsing, DTLS state machine, network wait & ${\approx}$2.4\M & 19\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Keccak (SHAKE) is about a third of all of it: ${\approx}$320 permutations per handshake, needed to expand the
+ML-KEM and ML-DSA matrices and to sample ML-DSA's masks. This is why the Keccak work paid off across the board.
+
+\section{Network and test methodology}
+In the simulator, the PHY delivers frames at one byte per CPU cycle, back to back. The MAC has only two RX slots,
+so the third frame of a server burst was lost while the ISR copied the first.
+\begin{itemize}
+  \item \textbf{Link model.} We shape \texttt{tap0} with \texttt{netem} at 2\,Mbit/s. The simulator executes
+    ${\approx}$2\,M cycles per wall-clock second, so this equals a 100\,Mbit/s link at 100\,MHz \emph{in device cycles}.
+  \item \textbf{Loss recovery.} Remaining losses of small back-to-back frames are recovered by the gap ACK; the
+    decrypted capture shows one such recovery.
+  \item \textbf{Server timer.} The server's initial retransmission timer is 10\,s, because it runs in real time
+    while the simulated device is ${\approx}50\times$ slower than a 100\,MHz part.
+  \item \textbf{Negative tests.} \texttt{scripts/verify.sh} checks that the device rejects a server certificate from
+    a rogue CA ($-188$), one with the wrong hostname ($-322$) or an expired one ($-151$). It also checks that the server
+    rejects a device certificate from a rogue CA ($-188$) or a missing one ($-345$). All rejections are clean on both
+    ends, with no hang.
+\end{itemize}
+
+\section{Security discussion and limitations}
+\begin{itemize}
+  \item \textbf{Pinning.} The device trusts the CA \emph{and} pins the server certificate. If the server presents
+    exactly that certificate, the CA signature on it is not re-verified (one ML-DSA verify, ${\approx}$2.5\M\ cycles).
+    Possession of the key is still proven by CertificateVerify, and any other certificate is fully validated
+    (RFC~7925 IoT profile). It can be disabled with \texttt{NOPIN=1}.
+  \item \textbf{Cookie.} We keep the HRR cookie. Removing it would save one round trip and ${\approx}$0.3\M\ cycles,
+    but the server would then do PQC work for spoofed ClientHellos.
+  \item \textbf{Entropy (main open item).} The SoC has no TRNG. Our seed hook mixes the cycle counter into
+    wolfCrypt's Hash-DRBG, which is \emph{not} secure entropy. A real deployment needs a hardware TRNG (e.g.\ a
+    ring-oscillator source) feeding the same hook.
+  \item \textbf{Time.} There is no RTC; the clock starts at the firmware build time for certificate validity checks.
+  \item \textbf{Assembly code.} The PQRV assembly uses \texttt{gp}/\texttt{tp} as scratch registers. The build fails
+    if the image ever defines a global pointer.
+\end{itemize}
+
+\vspace{2pt}
+{\small [1] J.~Zhang, Y.~Yan, J.~Huang, Ç.\,K.~Koç, ``Optimized Software Implementation of Keccak, Kyber, and
+Dilithium on RV\{32,64\}IM\{B\}\{V\}'', \emph{IACR TCHES} 2025(1), pp.~632--655. Code (MIT):
+\url{https://github.com/Ji-Peng/PQRV}.}
+
+\end{document}

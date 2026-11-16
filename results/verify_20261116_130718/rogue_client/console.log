@@ -1,0 +1,18 @@
+wall time: 38 s
+Executing booted program at 0x40000000
+
+--============= [1mLiftoff![0m ===============--
+
+=== PQC DTLS 1.3 client ===
+handshake: connecting to 192.168.1.100:11111 ...
+handshake FAILED: ret -1, error -313
+net: tx 22 pkts/18206 B, rx 18 pkts/10375 B, rx dropped 0, arp replies 1
+=== PQC DTLS 1.3 client FAILED ===
+
+firmware finished (error)
+--- server ---
+dtls_server: listening on udp/11111, certs /Users/nikhilpothuganti/Desktop/pqc-dtls/certs/mldsa44, 1 KEM group(s)
+
+[conn 0] client 192.168.1.50:11112
+[conn 0] handshake FAILED: -188 (ASN no signer error to confirm failure)
+--- capture: 68 UDP datagrams in /Users/nikhilpothuganti/Desktop/pqc-dtls/scripts/out/dtls.pcap ---

@@ -1,0 +1,955 @@
+ CC       crt0.o
+ CC       main.o
+ CC       net.o
+ CC       net_test.o
+python3 ../../scripts/der2c.py ../../certs/mldsa44 certs.h client-key-priv.der
+ CC       wolf_port.o
+ CC       metrics.o
+ CC       fastmem.o
+ CC       wolfcrypt/src/aes.o
+ CC       wolfcrypt/src/ascon.o
+ CC       wolfcrypt/src/arc4.o
+ CC       wolfcrypt/src/asm.o
+ CC       wolfcrypt/src/asn.o
+ CC       wolfcrypt/src/async.o
+ CC       wolfcrypt/src/blake2b.o
+ CC       wolfcrypt/src/blake2s.o
+ CC       wolfcrypt/src/camellia.o
+ CC       wolfcrypt/src/chacha20_poly1305.o
+In file included from wolf_port.c:6:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from metrics.c:4:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/chacha.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/aes.c:32:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/arc4.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/blake2b.c:34:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/chacha20_poly1305.c:30:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/asm.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/cmac.o
+wrote certs.h
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ascon.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/blake2s.c:34:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/chacha.c:32:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/coding.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/asn.c:38:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/cmac.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/camellia.c:55:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/compress.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/coding.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/compress.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/cpuid.o
+ CC       wolfcrypt/src/cryptocb.o
+ CC       wolfcrypt/src/curve25519.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/cpuid.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/curve448.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/cryptocb.c:39:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/des3.o
+ CC       wolfcrypt/src/dh.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/curve25519.c:25:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/curve448.c:28:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/des3.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/dh.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/dilithium.o
+ CC       wolfcrypt/src/dsa.o
+ CC       wolfcrypt/src/ecc.o
+ CC       wolfcrypt/src/ecc_fp.o
+ CC       wolfcrypt/src/eccsi.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/dsa.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/ed25519.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/dilithium.c:133:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ecc.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/ed448.o
+ CC       wolfcrypt/src/error.o
+ CC       wolfcrypt/src/evp.o
+ CC       wolfcrypt/src/ext_lms.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/eccsi.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/ext_mlkem.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ed25519.c:31:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/ext_xmss.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/error.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/evp.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/falcon.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ext_lms.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/fe_448.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ed448.c:33:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ext_mlkem.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/falcon.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/fe_448.c:27:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ext_xmss.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/fe_low_mem.o
+ CC       wolfcrypt/src/fe_operations.o
+wolfcrypt/src/evp.c:26:10: warning: #warning evp.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning evp.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/fe_low_mem.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/fe_operations.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/fips.o
+ CC       wolfcrypt/src/fips_test.o
+ CC       wolfcrypt/src/ge_448.o
+ CC       wolfcrypt/src/ge_low_mem.o
+ CC       wolfcrypt/src/ge_operations.o
+ CC       wolfcrypt/src/hash.o
+ CC       wolfcrypt/src/hmac.o
+ CC       wolfcrypt/src/hpke.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ge_448.c:32:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ge_low_mem.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ge_operations.c:25:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/integer.o
+ CC       wolfcrypt/src/kdf.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/hpke.c:26:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/logging.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/hmac.c:23:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/hash.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/md2.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/integer.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/md4.o
+ CC       wolfcrypt/src/md5.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/logging.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/kdf.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/md2.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/memory.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/md5.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/memory.c:29:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/misc.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/md4.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/pkcs12.o
+ CC       wolfcrypt/src/pkcs7.o
+ CC       wolfcrypt/src/poly1305.o
+ CC       wolfcrypt/src/pwdbased.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/misc.c:35:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/pkcs12.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/random.o
+ CC       wolfcrypt/src/rc2.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/pkcs7.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/poly1305.c:39:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/pwdbased.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/rc2.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/random.c:47:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/ripemd.o
+ CC       wolfcrypt/src/rsa.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/ripemd.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+wolfcrypt/src/misc.c:53:10: warning: #warning misc.c does not need to be compiled when using inline (NO_INLINE not defined) [-Wcpp]
+   53 |         #warning misc.c does not need to be compiled when using inline (NO_INLINE not defined)
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/rsa.c:30:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sakke.o
+ CC       wolfcrypt/src/selftest.o
+ CC       wolfcrypt/src/sha256.o
+ CC       wolfcrypt/src/sha3.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sakke.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sha512.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sha256.c:41:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sha.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sha3.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sha512.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/signature.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sha.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/signature.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/siphash.o
+ CC       wolfcrypt/src/sm2.o
+ CC       wolfcrypt/src/sm3.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/siphash.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sm2.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sm3.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sm4.o
+ CC       wolfcrypt/src/sp_arm32.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sm4.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_arm32.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_arm64.o
+ CC       wolfcrypt/src/sp_armthumb.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_arm64.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_c32.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_c32.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_armthumb.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_c64.o
+ CC       wolfcrypt/src/sp_cortexm.o
+ CC       wolfcrypt/src/sp_dsp32.o
+ CC       wolfcrypt/src/sphincs.o
+ CC       wolfcrypt/src/sp_int.o
+ CC       wolfcrypt/src/sp_sm2_arm32.o
+ CC       wolfcrypt/src/sp_sm2_arm64.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_cortexm.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_c64.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_dsp32.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_int.c:30:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_arm32.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sphincs.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_arm64.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_sm2_armthumb.o
+ CC       wolfcrypt/src/sp_sm2_c32.o
+ CC       wolfcrypt/src/sp_sm2_c64.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_armthumb.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_sm2_cortexm.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_c32.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_sm2_x86_64.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_c64.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/sp_x86_64.o
+ CC       wolfcrypt/src/srp.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_x86_64.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/tfm.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_x86_64.c:24:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/srp.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/sp_sm2_cortexm.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wc_dsp.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/tfm.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wc_encrypt.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_dsp.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wc_lms.o
+ CC       wolfcrypt/src/wc_lms_impl.o
+ CC       wolfcrypt/src/wc_mlkem.o
+ CC       wolfcrypt/src/wc_mlkem_poly.o
+ CC       wolfcrypt/src/wc_pkcs11.o
+ CC       wolfcrypt/src/wc_port.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_encrypt.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_mlkem.c:66:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wc_xmss.o
+ CC       wolfcrypt/src/wc_xmss_impl.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_mlkem_poly.c:70:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_port.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wolfcrypt_first.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_pkcs11.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_lms_impl.c:40:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_lms.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_xmss_impl.c:32:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wc_xmss.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       wolfcrypt/src/wolfcrypt_last.o
+ CC       wolfcrypt/src/wolfevent.o
+ CC       wolfcrypt/src/wolfmath.o
+ CC       src/bio.o
+ CC       src/conf.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wolfevent.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from wolfcrypt/src/wolfmath.c:29:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/bio.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/conf.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/crl.o
+ CC       src/dtls13.o
+ CC       src/dtls.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/dtls13.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/crl.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/internal.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/dtls.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/keys.o
+ CC       src/ocsp.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/internal.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+src/bio.c:31:10: warning: #warning bio.c does not need to be compiled separately from ssl.c [-Wcpp]
+   31 |         #warning bio.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ocsp.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+src/conf.c:26:10: warning: #warning conf.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning conf.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/keys.c:25:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/pk.o
+ CC       src/quic.o
+ CC       src/sniffer.o
+ CC       src/ssl_asn1.o
+ CC       src/ssl_bn.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/quic.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/pk.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/sniffer.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_bn.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_asn1.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/ssl.o
+ CC       src/ssl_certman.o
+ CC       src/ssl_crypto.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_crypto.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/ssl_load.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_certman.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/ssl_misc.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_load.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+src/dtls13.c:2086:12: warning: 'Dtls13InitAesCipher' defined but not used [-Wunused-function]
+ 2086 | static int Dtls13InitAesCipher(WOLFSSL* ssl, RecordNumberCiphers* cipher,
+      |            ^~~~~~~~~~~~~~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_misc.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+src/ssl_load.c:59:10: warning: #warning ssl_load.c does not need to be compiled separately from ssl.c [-Wcpp]
+   59 |         #warning ssl_load.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+ CC       src/ssl_p7p12.o
+src/ssl_crypto.c:26:10: warning: #warning ssl_crypto.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning ssl_crypto.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+src/pk.c:46:10: warning: #warning pk.c does not need to be compiled separately from ssl.c [-Wcpp]
+   46 |         #warning pk.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+src/ssl_bn.c:31:10: warning: #warning ssl_bn.c does not need to be compiled separately from ssl.c [-Wcpp]
+   31 |         #warning ssl_bn.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+ CC       src/ssl_sess.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_p7p12.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/ssl_sk.o
+src/ssl_misc.c:26:10: warning: #warning ssl_misc.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning ssl_misc.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+src/ssl_asn1.c:31:10: warning: #warning ssl_asn1.c does not need to be compiled separately from ssl.c [-Wcpp]
+   31 |         #warning ssl_asn1.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_sess.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/tls13.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/ssl_sk.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/tls.o
+ CC       src/wolfio.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/tls13.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/x509.o
+src/ssl_sess.c:26:10: warning: #warning ssl_sess.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning ssl_sess.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/tls.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/wolfio.c:27:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       src/x509_str.o
+src/ssl_p7p12.c:33:10: warning: #warning ssl_p7p12.c does not need to be compiled separately from ssl.c [-Wcpp]
+   33 |         #warning ssl_p7p12.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+src/ssl_certman.c:28:10: warning: #warning ssl_certman.c does not need to be compiled separately from ssl.c [-Wcpp]
+   28 |         #warning ssl_certman.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/x509.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       keccak_pqrv.o
+In file included from ./wolfssl/wolfcrypt/types.h:34,
+                 from ./wolfssl/wolfcrypt/libwolfssl_sources.h:46,
+                 from src/x509_str.c:22:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       keccak_pqrv_rv32im.o
+src/ssl_sk.c:26:10: warning: #warning ssl_sk.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning ssl_sk.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+ CC       pqrv_dilithium_ntt_rv32im.o
+In file included from keccak_pqrv.c:13:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+ CC       pqrv_dilithium_zetas.o
+ CC       dtls_client.o
+src/x509.c:26:10: warning: #warning x509.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning x509.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+In file included from dtls_client.c:13:
+./wolfssl/wolfcrypt/settings.h:4469:2: warning: #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" "fail.Use --enable-dtls-frag-ch to enable it." [-Wcpp]
+ 4469 | #warning "Using DTLS 1.3 + pqc without WOLFSSL_DTLS_CH_FRAG will probably" \
+      |  ^~~~~~~
+src/x509_str.c:26:10: warning: #warning x509_str.c does not need to be compiled separately from ssl.c [-Wcpp]
+   26 |         #warning x509_str.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+ CC       boot.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: boot.elf has a LOAD segment with RWX permissions
+chmod -x boot.elf
+ OBJCOPY  boot.bin
+chmod -x boot.bin
+-rw-r--r-- 1 nikhilpothuganti nikhilpothuganti 271504 Nov 16 15:54 boot.bin

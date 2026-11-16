@@ -21,6 +21,10 @@ SECTIONS
 		KEEP(*crt0*(.text))
 		KEEP(*(.text.isr))
 
+		/* Hot code first, grouped by phase for the 4 KB direct-mapped
+		 * I-cache (PQC-DTLS addition, see hot_text.ld). */
+		INCLUDE hot_text.ld
+
 		/* General code */
 		*(.text .stub .text.* .gnu.linkonce.t.*)
 

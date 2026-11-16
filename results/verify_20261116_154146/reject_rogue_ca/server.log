@@ -1,0 +1,4 @@
+dtls_server: listening on udp/11111, certs /Users/nikhilpothuganti/Desktop/pqc-dtls/certs/neg/rogue, 1 KEM group(s)
+
+[conn 0] client 192.168.1.50:11112
+[conn 0] handshake FAILED: -313 (received alert fatal error)

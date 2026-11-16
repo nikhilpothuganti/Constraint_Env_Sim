@@ -1,0 +1,11 @@
+PASS stability_1            device=ok     server=ok       wall=42s    hs=handshake cycles
+PASS stability_2            device=ok     server=ok       wall=40s    hs=handshake cycles
+PASS stability_3            device=ok     server=ok       wall=42s    hs=handshake cycles
+PASS stability_4            device=ok     server=ok       wall=40s    hs=handshake cycles
+PASS stability_5            device=ok     server=ok       wall=50s    hs=handshake cycles
+PASS reject_rogue_ca        device=failed server=rejected wall=18s    device: ret -1, error -188 | server: -313 (received alert fatal error)
+PASS reject_wrong_cn        device=failed server=rejected wall=20s    device: ret -1, error -322 | server: -313 (received alert fatal error)
+PASS reject_expired         device=failed server=rejected wall=20s    device: ret -1, error -151 | server: -313 (received alert fatal error)
+PASS rogue_client           device=failed server=rejected wall=38s    device: ret -1, error -313 | server: -188 (ASN no signer error to confirm failure)
+PASS no_client_cert         device=failed server=rejected wall=34s    device: ret -1, error -313 | server: -345 (peer did not return a certificate)
+=== ALL PASSED ===

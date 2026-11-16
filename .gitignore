@@ -33,3 +33,24 @@ boot/crt0.o
 boot/main.d
 boot/main.o
 build
+
+# --- PQC-DTLS project ---
+.DS_Store
+# firmware build products (objects, deps, maps) incl. the wolfSSL sources
+boot/**/*.o
+boot/**/*.d
+boot/*.elf
+boot/*.map
+boot/*.bin
+# generated from certs/ at build time; contains the device private key
+boot/certs.h
+# host server binary
+host/dtls_server
+# per-run scratch output of the scripts
+scripts/out/
+# private keys: regenerate the (test) PKI with scripts/gen_certs.sh 44 and
+# scripts/gen_neg_certs.sh
+certs/**/*-key.pem
+certs/**/*-key.der
+certs/**/*-key-priv.der
+certs/**/*.srl

@@ -1,0 +1,20 @@
+wall time: 14 s
+Executing booted program at 0x40000000
+
+--============= [1mLiftoff![0m ===============--
+
+=== PQC DTLS 1.3 client ===
+WARNING: test build without client certificate
+handshake: connecting to 192.168.1.100:11111 ...
+handshake FAILED: ret -1, error -313
+net: tx 5 pkts/2179 B, rx 12 pkts/7915 B, rx dropped 0 (ring) 2 (MAC), arp replies 0, isr max 3110 cycles
+heap: peak 42848 B (wolfSSL allocations), 311 allocs; stack peak 2128 B
+=== PQC DTLS 1.3 client FAILED ===
+
+firmware finished (error)
+--- server ---
+dtls_server: listening on udp/11111, certs /Users/nikhilpothuganti/Desktop/pqc-dtls/certs/mldsa44, 1 KEM group(s)
+
+[conn 0] client 192.168.1.50:11112
+[conn 0] handshake FAILED: -345 (peer did not return a certificate)
+--- capture: 18 UDP datagrams in /Users/nikhilpothuganti/Desktop/pqc-dtls/scripts/out/dtls.pcap ---

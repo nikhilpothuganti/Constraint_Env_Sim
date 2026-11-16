@@ -1,0 +1,481 @@
+INFO:SoC:        __   _ __      _  __  
+INFO:SoC:       / /  (_) /____ | |/_/  
+INFO:SoC:      / /__/ / __/ -_)>  <    
+INFO:SoC:     /____/_/\__/\__/_/|_|  
+INFO:SoC:  Build your hardware, easily!
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Creating SoC... (2026-11-16 05:06:31)
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:FPGA device : SIM.
+INFO:SoC:System clock: 1.000MHz.
+INFO:SoCBusHandler:Creating Bus Handler...
+INFO:SoCBusHandler:32-bit wishbone Bus, 4.0GiB Address Space.
+INFO:SoCBusHandler:Adding reserved Bus Regions...
+INFO:SoCBusHandler:Bus Handler created.
+INFO:SoCCSRHandler:Creating CSR Handler...
+INFO:SoCCSRHandler:32-bit CSR Bus, 32-bit Aligned, 16.0KiB Address Space, 2048B Paging, big Ordering (Up to 32 Locations).
+INFO:SoCCSRHandler:Adding reserved CSRs...
+INFO:SoCCSRHandler:CSR Handler created.
+INFO:SoCIRQHandler:Creating IRQ Handler...
+INFO:SoCIRQHandler:IRQ Handler (up to 32 Locations).
+INFO:SoCIRQHandler:Adding reserved IRQs...
+INFO:SoCIRQHandler:IRQ Handler created.
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Initial SoC:
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:32-bit wishbone Bus, 4.0GiB Address Space.
+INFO:SoC:32-bit CSR Bus, 32-bit Aligned, 16.0KiB Address Space, 2048B Paging, big Ordering (Up to 32 Locations).
+INFO:SoC:IRQ Handler (up to 32 Locations).
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Controller ctrl added.
+INFO:SoC:CPU vexriscv added.
+INFO:SoC:CPU vexriscv adding IO Region 0 at 0x80000000 (Size: 0x80000000).
+INFO:SoCBusHandler:io0 Region added at Origin: 0x80000000, Size: 0x80000000, Mode:  RW, Cached: False, Linker: False.
+INFO:SoC:CPU vexriscv overriding sram mapping from 0x01000000 to 0x10000000.
+INFO:SoC:CPU vexriscv setting reset address to 0x00000000.
+INFO:SoC:CPU vexriscv adding Bus Master(s).
+INFO:SoCBusHandler:cpu_bus0 added as Bus Master.
+INFO:SoCBusHandler:cpu_bus1 added as Bus Master.
+INFO:SoC:CPU vexriscv adding Interrupt(s).
+INFO:SoC:CPU vexriscv adding SoC components.
+INFO:SoCBusHandler:rom Region added at Origin: 0x00000000, Size: 0x00020000, Mode:  RX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:rom added as Bus Slave.
+INFO:SoC:RAM rom added Origin: 0x00000000, Size: 0x00020000, Mode:  RX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:sram Region added at Origin: 0x10000000, Size: 0x00002000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:sram added as Bus Slave.
+INFO:SoC:RAM sram added Origin: 0x10000000, Size: 0x00002000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCRegion:Region size rounded internally from 0x06400000 to 0x08000000.
+INFO:SoCBusHandler:main_ram Region added at Origin: 0x40000000, Size: 0x06400000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:main_ram added as Bus Slave.
+INFO:SoC:RAM main_ram added Origin: 0x40000000, Size: 0x06400000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCIRQHandler:uart IRQ allocated at Location 0.
+INFO:SoCIRQHandler:timer0 IRQ allocated at Location 1.
+{'boot.bin': '00000000'}
+INFO:SoC:        __   _ __      _  __  
+INFO:SoC:       / /  (_) /____ | |/_/  
+INFO:SoC:      / /__/ / __/ -_)>  <    
+INFO:SoC:     /____/_/\__/\__/_/|_|  
+INFO:SoC:  Build your hardware, easily!
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Creating SoC... (2026-11-16 05:06:31)
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:FPGA device : SIM.
+INFO:SoC:System clock: 1.000MHz.
+INFO:SoCBusHandler:Creating Bus Handler...
+INFO:SoCBusHandler:32-bit wishbone Bus, 4.0GiB Address Space.
+INFO:SoCBusHandler:Adding reserved Bus Regions...
+INFO:SoCBusHandler:Bus Handler created.
+INFO:SoCCSRHandler:Creating CSR Handler...
+INFO:SoCCSRHandler:32-bit CSR Bus, 32-bit Aligned, 16.0KiB Address Space, 2048B Paging, big Ordering (Up to 32 Locations).
+INFO:SoCCSRHandler:Adding reserved CSRs...
+INFO:SoCCSRHandler:CSR Handler created.
+INFO:SoCIRQHandler:Creating IRQ Handler...
+INFO:SoCIRQHandler:IRQ Handler (up to 32 Locations).
+INFO:SoCIRQHandler:Adding reserved IRQs...
+INFO:SoCIRQHandler:IRQ Handler created.
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Initial SoC:
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:32-bit wishbone Bus, 4.0GiB Address Space.
+INFO:SoC:32-bit CSR Bus, 32-bit Aligned, 16.0KiB Address Space, 2048B Paging, big Ordering (Up to 32 Locations).
+INFO:SoC:IRQ Handler (up to 32 Locations).
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Controller ctrl added.
+INFO:SoC:CPU vexriscv added.
+INFO:SoC:CPU vexriscv adding IO Region 0 at 0x80000000 (Size: 0x80000000).
+INFO:SoCBusHandler:io0 Region added at Origin: 0x80000000, Size: 0x80000000, Mode:  RW, Cached: False, Linker: False.
+INFO:SoC:CPU vexriscv setting reset address to 0x00000000.
+INFO:SoC:CPU vexriscv adding Bus Master(s).
+INFO:SoCBusHandler:cpu_bus0 added as Bus Master.
+INFO:SoCBusHandler:cpu_bus1 added as Bus Master.
+INFO:SoC:CPU vexriscv adding Interrupt(s).
+INFO:SoC:CPU vexriscv adding SoC components.
+INFO:SoCBusHandler:rom Region added at Origin: 0x00000000, Size: 0x00020000, Mode:  RX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:rom added as Bus Slave.
+INFO:SoC:RAM rom added Origin: 0x00000000, Size: 0x00020000, Mode:  RX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:sram Region added at Origin: 0x10000000, Size: 0x00002000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:sram added as Bus Slave.
+INFO:SoC:RAM sram added Origin: 0x10000000, Size: 0x00002000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCRegion:Region size rounded internally from 0x06400000 to 0x08000000.
+INFO:SoCBusHandler:main_ram Region added at Origin: 0x40000000, Size: 0x06400000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCBusHandler:main_ram added as Bus Slave.
+INFO:SoC:RAM main_ram added Origin: 0x40000000, Size: 0x06400000, Mode: RWX, Cached:  True, Linker: False.
+INFO:SoCIRQHandler:uart IRQ allocated at Location 0.
+INFO:SoCIRQHandler:timer0 IRQ allocated at Location 1.
+INFO:SoC:CSR Bridge csr added.
+INFO:SoCBusHandler:csr Region added at Origin: 0xf0000000, Size: 0x00010000, Mode:  RW, Cached: False, Linker: False.
+INFO:SoCBusHandler:csr added as Bus Slave.
+INFO:SoCCSRHandler:csr added as CSR Master.
+INFO:SoCBusHandler:Interconnect: InterconnectShared (2 <-> 4).
+INFO:SoCCSRHandler:ctrl CSR allocated at Location 0.
+INFO:SoCCSRHandler:identifier_mem CSR allocated at Location 1.
+INFO:SoCCSRHandler:timer0 CSR allocated at Location 2.
+INFO:SoCCSRHandler:uart CSR allocated at Location 3.
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:Finalized SoC:
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:32-bit wishbone Bus, 4.0GiB Address Space.
+IO Regions: (1)
+io0                 : Origin: 0x80000000, Size: 0x80000000, Mode:  RW, Cached: False, Linker: False
+Bus Regions: (4)
+rom                 : Origin: 0x00000000, Size: 0x00020000, Mode:  RX, Cached:  True, Linker: False
+sram                : Origin: 0x10000000, Size: 0x00002000, Mode: RWX, Cached:  True, Linker: False
+main_ram            : Origin: 0x40000000, Size: 0x06400000, Mode: RWX, Cached:  True, Linker: False
+csr                 : Origin: 0xf0000000, Size: 0x00010000, Mode:  RW, Cached: False, Linker: False
+Bus Masters: (2)
+- cpu_bus0          : rw
+- cpu_bus1          : rw
+Bus Slaves: (4)
+- rom               : r
+- sram              : rw
+- main_ram          : rw
+- csr               : rw
+INFO:SoC:32-bit CSR Bus, 32-bit Aligned, 16.0KiB Address Space, 2048B Paging, big Ordering (Up to 32 Locations).
+CSR Locations: (4)
+- ctrl           : 0
+- identifier_mem : 1
+- timer0         : 2
+- uart           : 3
+INFO:SoC:IRQ Handler (up to 32 Locations).
+IRQ Locations: (2)
+- uart   : 0
+- timer0 : 1
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:SoC Hierarchy:
+INFO:SoC:--------------------------------------------------------------------------------
+INFO:SoC:
+SimSoC
+└─── crg (CRG)
+└─── bus (SoCBusHandler)
+│    └─── _interconnect (InterconnectShared)
+│    │    └─── arbiter (Arbiter)
+│    │    │    └─── rr (RoundRobin)
+│    │    └─── decoder (Decoder)
+│    │    └─── timeout (Timeout)
+│    │    │    └─── waittimer_0* (WaitTimer)
+└─── csr (SoCCSRHandler)
+└─── irq (SoCIRQHandler)
+└─── ctrl (SoCController)
+└─── cpu (VexRiscv)
+│    └─── [VexRiscv]
+└─── rom (SRAM)
+└─── sram (SRAM)
+└─── main_ram (SRAM)
+└─── identifier (Identifier)
+└─── uart (UART)
+│    └─── ev (EventManager)
+│    │    └─── eventsourcelevel_0* (EventSourceLevel)
+│    │    └─── eventsourcelevel_1* (EventSourceLevel)
+│    └─── phy (RS232PHYModel)
+│    └─── tx_fifo (SyncFIFO)
+│    │    └─── fifo (SyncFIFOBuffered)
+│    │    │    └─── fifo (SyncFIFO)
+│    └─── rx_fifo (SyncFIFO)
+│    │    └─── fifo (SyncFIFOBuffered)
+│    │    │    └─── fifo (SyncFIFO)
+└─── timer0 (Timer)
+│    └─── ev (EventManager)
+│    │    └─── eventsourceprocess_0* (EventSourceProcess)
+└─── csr_bridge (Wishbone2CSR)
+│    └─── fsm (FSM)
+└─── csr_bankarray (CSRBankArray)
+│    └─── csrbank_0* (CSRBank)
+│    │    └─── csrstorage_0* (CSRStorage)
+│    │    └─── csrstorage_1* (CSRStorage)
+│    │    └─── csrstatus_0* (CSRStatus)
+│    └─── sram_0* (SRAM)
+│    └─── csrbank_1* (CSRBank)
+│    │    └─── csrstorage_0* (CSRStorage)
+│    │    └─── csrstorage_1* (CSRStorage)
+│    │    └─── csrstorage_2* (CSRStorage)
+│    │    └─── csrstorage_3* (CSRStorage)
+│    │    └─── csrstatus_0* (CSRStatus)
+│    │    └─── csrstatus_1* (CSRStatus)
+│    │    └─── csrstatus_2* (CSRStatus)
+│    │    └─── csrstorage_4* (CSRStorage)
+│    └─── csrbank_2* (CSRBank)
+│    │    └─── csrstatus_0* (CSRStatus)
+│    │    └─── csrstatus_1* (CSRStatus)
+│    │    └─── csrstatus_2* (CSRStatus)
+│    │    └─── csrstatus_3* (CSRStatus)
+│    │    └─── csrstorage_0* (CSRStorage)
+│    │    └─── csrstatus_4* (CSRStatus)
+│    │    └─── csrstatus_5* (CSRStatus)
+└─── csr_interconnect (InterconnectShared)
+* : Generated name.
+[]: BlackBox.
+
+INFO:SoC:--------------------------------------------------------------------------------
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libc'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libc'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libcompiler_rt'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libcompiler_rt'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libbase'
+ CC       console.o
+ CC       system.o
+ CC       memtest.o
+ CC       uart.o
+ CC       spiflash.o
+ CC       i2c.o
+ CC       isr.o
+ CC       hyperram.o
+ AR       libbase.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libbase'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libfatfs'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libfatfs'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitespi'
+ CC       spiflash.o
+ CC       spiram.o
+ AR       liblitespi.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitespi'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitedram'
+ CC       sdram.o
+ CC       bist.o
+ CC       sdram_dbg.o
+ CC       sdram_spd.o
+ CC       utils.o
+ CC       accessors.o
+ AR       liblitedram.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitedram'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libliteeth'
+ CC       udp.o
+ CC       tftp.o
+ CC       mdio.o
+ AR       libliteeth.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/libliteeth'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitesdcard'
+ CC       sdcard.o
+ CC       spisdcard.o
+ AR       liblitesdcard.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitesdcard'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitesata'
+ CC       sata.o
+ AR       liblitesata.a
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/liblitesata'
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/bios'
+ CC       boot.o
+ CC       cmd_bios.o
+ CC       cmd_mem.o
+ CC       cmd_boot.o
+ CC       cmd_i2c.o
+ CC       cmd_spiflash.o
+ CC       cmd_litedram.o
+ CC       cmd_liteeth.o
+ CC       cmd_litesdcard.o
+ CC       cmd_litesata.o
+ CC       sim_debug.o
+ CC       main.o
+ CC       bios.elf
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: bios.elf has a LOAD segment with RWX permissions
+chmod -x bios.elf
+ OBJCOPY  bios.bin
+chmod -x bios.bin
+python3 -m litex.soc.software.crcfbigen bios.bin --little
+python3 -m litex.soc.software.memusage bios.elf /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/bios/../include/generated/regions.ld riscv64-unknown-elf
+
+ROM usage: 23.71KiB 	(18.53%)
+RAM usage: 1.62KiB 	(20.21%)
+
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/software/bios'
+INFO:SoC:Initializing ROM rom with contents (Size: 0x5eec).
+INFO:SoC:Auto-Resizing ROM rom from 0x20000 to 0x5eec.
+make: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware'
+mkdir -p modules
+make -C modules -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/Makefile
+make[1]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules'
+mkdir -p xgmii_ethernet
+make MOD=xgmii_ethernet -C xgmii_ethernet -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/xgmii_ethernet/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/xgmii_ethernet'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/xgmii_ethernet'
+cp xgmii_ethernet/xgmii_ethernet.so xgmii_ethernet.so
+mkdir -p ethernet
+make MOD=ethernet -C ethernet -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/ethernet/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/ethernet'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/ethernet'
+cp ethernet/ethernet.so ethernet.so
+mkdir -p serial2console
+make MOD=serial2console -C serial2console -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/serial2console/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/serial2console'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/serial2console'
+cp serial2console/serial2console.so serial2console.so
+mkdir -p serial2tcp
+make MOD=serial2tcp -C serial2tcp -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/serial2tcp/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/serial2tcp'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/serial2tcp'
+cp serial2tcp/serial2tcp.so serial2tcp.so
+mkdir -p clocker
+make MOD=clocker -C clocker -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/clocker/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/clocker'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/clocker'
+cp clocker/clocker.so clocker.so
+mkdir -p spdeeprom
+make MOD=spdeeprom -C spdeeprom -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/spdeeprom/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/spdeeprom'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/spdeeprom'
+cp spdeeprom/spdeeprom.so spdeeprom.so
+mkdir -p gmii_ethernet
+make MOD=gmii_ethernet -C gmii_ethernet -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/gmii_ethernet/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/gmii_ethernet'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/gmii_ethernet'
+cp gmii_ethernet/gmii_ethernet.so gmii_ethernet.so
+mkdir -p jtagremote
+make MOD=jtagremote -C jtagremote -f /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules/jtagremote/Makefile
+make[2]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/jtagremote'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules/jtagremote'
+cp jtagremote/jtagremote.so jtagremote.so
+make[1]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/modules'
+mkdir -p /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir
+cc -c -ggdb -Wall -O3    -o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir/libdylib.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/libdylib.c
+cc -c -ggdb -Wall -O3    -o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir/modules.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules.c
+In file included from /usr/include/string.h:548,
+                 from /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules.c:5:
+In function ‘strcat’,
+    inlined from ‘tinydir_readfile’ at /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/tinydir.h:532:2,
+    inlined from ‘litex_sim_load_ext_modules’ at /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/modules.c:68:14:
+/usr/include/aarch64-linux-gnu/bits/string_fortified.h:130:10: warning: ‘__builtin___strcat_chk’ accessing 4097 or more bytes at offsets 0 and 4096 may overlap 1 byte at offset 4096 [-Wrestrict]
+  130 |   return __builtin___strcat_chk (__dest, __src, __glibc_objsize (__dest));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc -c -ggdb -Wall -O3    -o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir/pads.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/pads.c
+cc -c -ggdb -Wall -O3    -o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir/parse.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/parse.c
+cc -c -ggdb -Wall -O3    -o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir/sim.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/sim.c
+verilator -Wno-fatal -O3 --cc /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Full.v --cc /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/sim.v  --top-module sim --exe \
+	-DPRINTF_COND=0 \
+	sim_init.cpp /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/veril.cpp libdylib.o modules.o pads.o parse.o sim.o \
+	--top-module sim \
+	 \
+	-CFLAGS "-ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core" \
+	-LDFLAGS "-lpthread -Wl,--no-as-needed -ljson-c -lz -lm -lstdc++ -Wl,--no-as-needed -ldl -levent " \
+	--trace \
+	 \
+	 \
+	 \
+	--unroll-count 256 \
+	--output-split 5000 \
+	--output-split-cfuncs 500 \
+	--output-split-ctrace 500 \
+	 \
+	-Wno-BLKANDNBLK \
+	-Wno-WIDTH \
+	-Wno-COMBDLY \
+	-Wno-CASEINCOMPLETE \
+	 \
+	--relative-includes 
+make -j -C /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir -f Vsim.mk Vsim
+make[1]: Entering directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir'
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -Os -c -o veril.o /Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core/veril.cpp
+g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -Os -c -o sim_init.o ../sim_init.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -c -o verilated_dpi.o /usr/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -x c++-header Vsim__pch.h -o Vsim__pch.h.fast.gch
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -x c++-header Vsim__pch.h -o Vsim__pch.h.slow.gch
+echo "" > Vsim__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim.o Vsim.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim___024root__DepSet_h104c642d__0.o Vsim___024root__DepSet_h104c642d__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim___024root__DepSet_hb1836b75__0.o Vsim___024root__DepSet_hb1836b75__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim_sim__DepSet_h837b84dc__0.o Vsim_sim__DepSet_h837b84dc__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim_sim__DepSet_h40728c06__0.o Vsim_sim__DepSet_h40728c06__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim_VexRiscv__DepSet_hda50bfa8__0.o Vsim_VexRiscv__DepSet_hda50bfa8__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim_VexRiscv__DepSet_h9f7c89a9__0.o Vsim_VexRiscv__DepSet_h9f7c89a9__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim_VexRiscv__DepSet_h9f7c89a9__1.o Vsim_VexRiscv__DepSet_h9f7c89a9__1.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim__Dpi.o Vsim__Dpi.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.fast -c -o Vsim__Trace__0.o Vsim__Trace__0.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim__ConstPool_0.o Vsim__ConstPool_0.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim___024root__Slow.o Vsim___024root__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim___024root__DepSet_h104c642d__0__Slow.o Vsim___024root__DepSet_h104c642d__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim___024root__DepSet_hb1836b75__0__Slow.o Vsim___024root__DepSet_hb1836b75__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_sim__Slow.o Vsim_sim__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_sim__DepSet_h837b84dc__0__Slow.o Vsim_sim__DepSet_h837b84dc__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_sim__DepSet_h40728c06__0__Slow.o Vsim_sim__DepSet_h40728c06__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_VexRiscv__Slow.o Vsim_VexRiscv__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_VexRiscv__DepSet_hda50bfa8__0__Slow.o Vsim_VexRiscv__DepSet_hda50bfa8__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_VexRiscv__DepSet_hda50bfa8__1__Slow.o Vsim_VexRiscv__DepSet_hda50bfa8__1__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim_VexRiscv__DepSet_h9f7c89a9__0__Slow.o Vsim_VexRiscv__DepSet_h9f7c89a9__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim__Syms.o Vsim__Syms.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim__Trace__0__Slow.o Vsim__Trace__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim__TraceDecls__0__Slow.o Vsim__TraceDecls__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -ggdb -Wall -O3    -I/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/litex/litex/build/sim/core   -include Vsim__pch.h.slow -c -o Vsim__Trace__1__Slow.o Vsim__Trace__1__Slow.cpp
+Archive ar -rcs Vsim__ALL.a Vsim.o Vsim___024root__DepSet_h104c642d__0.o Vsim___024root__DepSet_hb1836b75__0.o Vsim_sim__DepSet_h837b84dc__0.o Vsim_sim__DepSet_h40728c06__0.o Vsim_VexRiscv__DepSet_hda50bfa8__0.o Vsim_VexRiscv__DepSet_h9f7c89a9__0.o Vsim_VexRiscv__DepSet_h9f7c89a9__1.o Vsim__Dpi.o Vsim__Trace__0.o Vsim__ConstPool_0.o Vsim___024root__Slow.o Vsim___024root__DepSet_h104c642d__0__Slow.o Vsim___024root__DepSet_hb1836b75__0__Slow.o Vsim_sim__Slow.o Vsim_sim__DepSet_h837b84dc__0__Slow.o Vsim_sim__DepSet_h40728c06__0__Slow.o Vsim_VexRiscv__Slow.o Vsim_VexRiscv__DepSet_hda50bfa8__0__Slow.o Vsim_VexRiscv__DepSet_hda50bfa8__1__Slow.o Vsim_VexRiscv__DepSet_h9f7c89a9__0__Slow.o Vsim__Syms.o Vsim__Trace__0__Slow.o Vsim__TraceDecls__0__Slow.o Vsim__Trace__1__Slow.o
+g++     veril.o sim_init.o verilated.o verilated_dpi.o verilated_vcd_c.o verilated_threads.o Vsim__ALL.a   libdylib.o modules.o pads.o parse.o sim.o -lpthread -Wl,--no-as-needed -ljson-c -lz -lm -lstdc++ -Wl,--no-as-needed -ldl -levent  -pthread -lpthread -latomic   -o Vsim
+rm Vsim__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware/obj_dir'
+make: Leaving directory '/Users/nikhilpothuganti/Desktop/pqc-dtls/Constraint_Env_Sim/build/sim/gateware'
+
+[jtagremote] loaded (0xaaaae451c2f0)
+[clocker] loaded
+[spdeeprom] loaded (addr = 0x0)
+[xgmii_ethernet] loaded (0xaaaae451c2f0)
+[serial2tcp] loaded (0xaaaae451c2f0)
+[gmii_ethernet] loaded (0xaaaae451c2f0)
+[ethernet] loaded (0xaaaae451c2f0)
+[serial2console] loaded (0xaaaae451c2f0)
+MDEBUG: Save time: -1, load_time: 0
+[clocker] sys_clk: freq_hz=1000000, phase_deg=0
+[warn] Epoll ADD(1) on fd 0 failed. Old events were 0; read change was 1 (add); write change was 0 (none); close change was 0 (none): Operation not permitted
+
+[1m        __   _ __      _  __[0m
+[1m       / /  (_) /____ | |/_/[0m
+[1m      / /__/ / __/ -_)>  <[0m
+[1m     /____/_/\__/\__/_/|_|[0m
+[1m   Build your hardware, easily![0m
+
+ (c) Copyright 2012-2025 Enjoy-Digital
+ (c) Copyright 2007-2015 M-Labs
+
+ BIOS built on Nov 16 2026 05:06:32
+ BIOS CRC passed (3ccc087a)
+
+ LiteX git sha1: 83ddf63
+
+--=============== [1mSoC[0m ==================--
+[1mCPU[0m:		VexRiscv_Full @ 1MHz
+[1mBUS[0m:		wishbone 32-bit @ 4GiB
+[1mCSR[0m:		32-bit data big ordering
+[1mROM[0m:		128.0KiB
+[1mSRAM[0m:		8.0KiB
+[1mMAIN-RAM[0m:	100.0MiB
+
+--========== [1mInitialization[0m ============--
+
+
+--============== [1mBoot[0m ==================--
+Booting from serial...
+Press Q or ESC to abort boot completely.
+sL5DdSMmkekro
+Timeout
+Executing booted program at 0x40000000
+
+--============= [1mLiftoff![0m ===============--
+
+Basic ML-KEM KEY generation TEST
+Generated 32 random bytes:
+D0 4B 4B 07 AC BC F4 31 8C A6 49 1F 34 A8 F3 1F
+98 A4 31 9E 7C 01 E4 02 8A 0B D3 4E 2A 7C 27 07
+--------------------------ML_KEM_512-------------------------
+
+Private key
+c2ac11b074a859d8922b818040c32c64f3b774956e69b3b20eb73d333c5e999220527a2100dd901391982d330c181b6d2f85ab8faa2d632060e8e997608c34064aaa0cbb65de72a09f5952c4d39dffcbbcbc5223fea92a95f49b142a4ef8f2bb40ca5cfd6097add1787937a7a88224f9a4c55b59432185cc3d276e48415e1f3a1527461d4ae131cfa6a581192ef7ea2bdfa907600366a0b42feb776942086a231c6ec81436faf6752da21375733ef0a74eab205164bb5a5f3b9dd3964570fa8efabc6b2b59085677b6db1348a56961aee137e5d25a65f80273e7c53a88b0c269cde9774847e6c8a3aa35f0a798b9575c4952c37a56791b4cb22476cc4af47bc7ea643fc2142fd67b75d5895c00638ce508e2abb626901d896839d28a0cf2e5010aa861436ac09007869a4c1c749b115d691b22dac1f4b71d804b1525071199b5433651bfbbdc2abce2cf3eb83c76628530e8cc5a713fc8722c00b8a205b6414ed3694e56481971173722b7532024dc671f12a2bd84a249d5fc5af4624e42fbc1b2c109bbf863f7bc3585d46cecd139cd61518241358b497475b247aeac2c4c0836d553abfc293952e02b8a6603502903dea2ae2ed9a294b386c0f14ec42b307b017e299b0c89f4abc6eca53cfa7f84568ee884021b01907019ae39a86b996999dfb559f5586b6af59922f53d11fb7866a01e6ed2a72ca47594e55368a213989b1504c7173000217ee826e0d7241d9c5eac133da44587b3a797c9e36073a25c0c4a277b7abd7df394e6a39d492511735046dabb036624268b88c3a9223a5ac138f6c47ee9a41274d49e9038487e46645a31a98c8a35bf44ce0b335e0a4258d9f14df35aa6c14879a3b0cb43608dd8c126c21a960c28588f0635a4710ddfd74711ca00b231c7fb008a57588803c76cade7044f8263aa1a22f842038a463748d8797c85a76b57737df5561488ce6db463b95446295c45c692a6fbf670009057309a913b27bed2491020d246bfb105c3344f5aa0705da73211285fdd544ca00448f4aabb36e77519579a8ef12a2a5b56bb923ac06a341be51cfed8af53c473412bab4a7a5e3991b4b5220e54563ac7425bd94b244c51c0a003637d042548a42420d52c74f5b033862d4fdbae7c2683b5ea882fe2631b22580d3b387f93559256976767baabd749a34302420a9f2895584e747f34845b6ce688c0a480f120afde0654b637b600948bc8a1730496c34d71a05dac8fba87029bf67e0e760476f9164c21274b7a2b71e072b7d646bcc96f287aa97431749976581f857d701cae4822c4e00803cda14a1ae43c3a6003d6ba7761c01feb9473b2d1c2c07b78775b39c63b58cae70541c67682db80c0a82a3f26b6e97477c2f0864b109e47019fb02400b8fb3e42cb4d0785a0480071eb54a0c036a66551b53d97661ecb87634aa627451594929827a107cef588627635f097988220a1e6f0a701b6168e94c072922403194f6bcb1ccc92a97d44086a91ca55415f8d002603e72c09b0887ef5151b751fd0a71e58143f695b868fc93faa5a8fab946e138a0d4536cd5799820a3724e0565f3c55c1ac2570e81cc5d69b0d7c1a84d572974df95d834c042bc22c36d797ef485ad7313af5501154b13b472980d9621ddb6417d0352ba8e3b8e397b29c8c27aee4c1caf6a9e06ba06c1cc41d5869bcb921e00729896a67a0f5a7e14348e38872b0a46761c50040e7bbcc871f303b027edc6a2a708a9a12a2a8c37818c0a0d4d90feb3979088629964a233fd46aac173485c99df4c41b5e903d0b718a3d71604c0368b73410061423f3902844f089d1a0ac72597d315134a31920f02aa4e083cf32989633b847d95009f3d693746a5f07e8453f6a5e923194e3da3e0a2b2f116a2d2d21c7bf49c522bc014e059b86870679f28f6218a6f2e86c8ca71392b54dc326bbaa5bae87f51036c55231282df50a51fd457f37b0c6d5c520b42c9ad9b9779d0a2492a8c5a87a2d6348b0464b477a1399550102b4541e1c6884dbc3ac350a8f289151aed8c941020c52e3072327a3bd761c1976c2cf1b6aeae10b6ad8326d1c36ca0578896156e140c59747ab7ab23616610c1bd988b47ab7a4e98ef6159555876f3cb432281b9a7648326e907a553c538a82b0e0466498681261b209cd909d7a348bb7c3c13f7eebdfdc6512438e16a5943d9c1d3f292abce010cc1e50cde6bc8c38707b96a18d7ef5d7c9e905a36408fb086411a998d41f8510a4e71664ea5fac4b273c05e227615574691165926542c14be497475d10bd40e26381be1f7f
+Public key
+4a7a5e3991b4b5220e54563ac7425bd94b244c51c0a003637d042548a42420d52c74f5b033862d4fdbae7c2683b5ea882fe2631b22580d3b387f93559256976767baabd749a34302420a9f2895584e747f34845b6ce688c0a480f120afde0654b637b600948bc8a1730496c34d71a05dac8fba87029bf67e0e760476f9164c21274b7a2b71e072b7d646bcc96f287aa97431749976581f857d701cae4822c4e00803cda14a1ae43c3a6003d6ba7761c01feb9473b2d1c2c07b78775b39c63b58cae70541c67682db80c0a82a3f26b6e97477c2f0864b109e47019fb02400b8fb3e42cb4d0785a0480071eb54a0c036a66551b53d97661ecb87634aa627451594929827a107cef588627635f097988220a1e6f0a701b6168e94c072922403194f6bcb1ccc92a97d44086a91ca55415f8d002603e72c09b0887ef5151b751fd0a71e58143f695b868fc93faa5a8fab946e138a0d4536cd5799820a3724e0565f3c55c1ac2570e81cc5d69b0d7c1a84d572974df95d834c042bc22c36d797ef485ad7313af5501154b13b472980d9621ddb6417d0352ba8e3b8e397b29c8c27aee4c1caf6a9e06ba06c1cc41d5869bcb921e00729896a67a0f5a7e14348e38872b0a46761c50040e7bbcc871f303b027edc6a2a708a9a12a2a8c37818c0a0d4d90feb3979088629964a233fd46aac173485c99df4c41b5e903d0b718a3d71604c0368b73410061423f3902844f089d1a0ac72597d315134a31920f02aa4e083cf32989633b847d95009f3d693746a5f07e8453f6a5e923194e3da3e0a2b2f116a2d2d21c7bf49c522bc014e059b86870679f28f6218a6f2e86c8ca71392b54dc326bbaa5bae87f51036c55231282df50a51fd457f37b0c6d5c520b42c9ad9b9779d0a2492a8c5a87a2d6348b0464b477a1399550102b4541e1c6884dbc3ac350a8f289151aed8c941020c52e3072327a3bd761c1976c2cf1b6aeae10b6ad8326d1c36ca0578896156e140c59747ab7ab23616610c1bd988b47ab7a4e98ef6159555876f3cb432281b9a7648326e907a553c538a82b0e0466498681261b209cd909d7a348bb7c3c13f7eebdfdc6512438e16a5943d9c1d3f292abce010cc1e50cde6
+
+=== wolfSSL TLS Test Start ===
+Starting TLS 1.3 handshake...
+wolfSSL SEND called, size=113
+wolfSSL RECV called, size=5
+wolfSSL_connect returned error 2
+wolfSSL functional: WANT_READ/WRITE expected.
+=== wolfSSL TLS Test Complete ===
+

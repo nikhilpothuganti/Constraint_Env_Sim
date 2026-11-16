@@ -5417,6 +5417,16 @@ static void dilithium_vec_use_hint(sword32* w1, byte k, sword32 gamma2,
  * Maths operations
  ******************************************************************************/
 
+/* PQC-DTLS patch: words of padding after each sub-buffer of the signing
+ * scratch block. All polynomials are 1 KB, so without padding every buffer
+ * starts at the same offset modulo 1 KB and, on a direct-mapped data cache
+ * (VexRiscv: 4 KB, 1 way), the rows of A and the polynomials of y map to the
+ * same cache lines: in A*y nearly every load evicts the other operand.
+ * 0 = upstream layout. */
+#ifndef DILITHIUM_SIGN_PAD_WORDS
+    #define DILITHIUM_SIGN_PAD_WORDS 0
+#endif
+
 /* q^-1 mod 2^32 (inverse of 8380417 mod 2^32 = 58728449 = 0x3802001) */
 #define DILITHIUM_QINV          58728449
 
@@ -5539,6 +5549,17 @@ static const sword32 zetas_inv[DILITHIUM_N] = {
     !defined(WOLFSSL_DILITHIUM_NO_VERIFY) || \
     (!defined(WOLFSSL_DILITHIUM_NO_MAKE) && defined(WOLFSSL_DILITHIUM_SMALL))
 
+/* PQC-DTLS patch: DILITHIUM_NTT_PQRV routes the forward/inverse NTT to the
+ * PQRV RV32IM single-issue assembly (pqrv_dilithium_ntt_rv32im.S, TCHES
+ * 2025, MIT): 15.1k/15.9k cycles vs ~35k/39k for the reference C on
+ * VexRiscv. Same algorithm and constants (Montgomery, f = 41978). */
+#ifdef DILITHIUM_NTT_PQRV
+extern int32_t zetas_ntt_8l_rv32im[512];
+extern int32_t zetas_intt_8l_rv32im[512];
+extern void ntt_8l_rv32im(int32_t *r, int32_t *zetas);
+extern void intt_8l_rv32im(int32_t *r, int32_t *zetas);
+#endif
+
 /* One iteration of Number-Theoretic Transform.
  *
  * @param [in] len  Length of sequence.
@@ -5564,6 +5585,10 @@ while (0)
  */
 static void dilithium_ntt_c(sword32* r)
 {
+#ifdef DILITHIUM_NTT_PQRV
+    ntt_8l_rv32im((int32_t*)r, zetas_ntt_8l_rv32im);
+    return;
+#endif
 #ifdef WOLFSSL_DILITHIUM_SMALL
     unsigned int len;
     unsigned int k;
@@ -6030,6 +6055,10 @@ static void dilithium_vec_ntt_full(sword32* r, byte l)
  */
 static void dilithium_ntt_small_c(sword32* r)
 {
+#ifdef DILITHIUM_NTT_PQRV
+    ntt_8l_rv32im((int32_t*)r, zetas_ntt_8l_rv32im);
+    return;
+#endif
     unsigned int k;
     unsigned int j;
 #ifdef WOLFSSL_DILITHIUM_NO_LARGE_CODE
@@ -6504,6 +6533,10 @@ while (0)
  */
 static void dilithium_invntt_c(sword32* r)
 {
+#ifdef DILITHIUM_NTT_PQRV
+    intt_8l_rv32im((int32_t*)r, zetas_intt_8l_rv32im);
+    return;
+#endif
 #ifdef WOLFSSL_DILITHIUM_SMALL
     unsigned int len;
     unsigned int k;
@@ -8185,23 +8218,26 @@ static int dilithium_sign_with_seed_mu(dilithium_key* key,
         /* A */
         allocSz += params->aSz;
 #endif
+        /* PQC-DTLS patch: optional gap after each sub-buffer, see
+         * DILITHIUM_SIGN_PAD_WORDS. */
+        allocSz += 10 * DILITHIUM_SIGN_PAD_WORDS * sizeof(sword32);
         y = (sword32*)XMALLOC(allocSz, key->heap, DYNAMIC_TYPE_DILITHIUM);
         if (y == NULL) {
             ret = MEMORY_E;
         }
         else {
-            w0  = y   + params->s1Sz / sizeof(*y);
-            w1  = w0  + params->s2Sz / sizeof(*w0);
-            c   = w1  + params->s2Sz / sizeof(*w1);
-            z   = c   + DILITHIUM_N;
-            ct0 = z   + params->s1Sz / sizeof(*z);
+            w0  = y   + params->s1Sz / sizeof(*y)   + DILITHIUM_SIGN_PAD_WORDS;
+            w1  = w0  + params->s2Sz / sizeof(*w0)  + DILITHIUM_SIGN_PAD_WORDS;
+            c   = w1  + params->s2Sz / sizeof(*w1)  + DILITHIUM_SIGN_PAD_WORDS;
+            z   = c   + DILITHIUM_N                 + DILITHIUM_SIGN_PAD_WORDS;
+            ct0 = z   + params->s1Sz / sizeof(*z)   + DILITHIUM_SIGN_PAD_WORDS;
 #ifndef WC_DILITHIUM_CACHE_PRIV_VECTORS
-            s1  = ct0 + params->s2Sz / sizeof(*ct0);
-            s2  = s1  + params->s1Sz / sizeof(*s1);
-            t0  = s2  + params->s2Sz / sizeof(*s2);
+            s1  = ct0 + params->s2Sz / sizeof(*ct0) + DILITHIUM_SIGN_PAD_WORDS;
+            s2  = s1  + params->s1Sz / sizeof(*s1)  + DILITHIUM_SIGN_PAD_WORDS;
+            t0  = s2  + params->s2Sz / sizeof(*s2)  + DILITHIUM_SIGN_PAD_WORDS;
 #endif
 #ifndef WC_DILITHIUM_CACHE_MATRIX_A
-            a   = t0  + params->s2Sz / sizeof(*s2);
+            a   = t0  + params->s2Sz / sizeof(*s2)  + DILITHIUM_SIGN_PAD_WORDS;
 #endif
         }
     }

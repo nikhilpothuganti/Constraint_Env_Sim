@@ -1,0 +1,19 @@
+wall time: 12 s
+Executing booted program at 0x40000000
+
+--============= [1mLiftoff![0m ===============--
+
+=== PQC DTLS 1.3 client ===
+handshake: connecting to 192.168.1.100:11111 ...
+handshake FAILED: ret -1, error -188
+net: tx 4 pkts/2099 B, rx 11 pkts/7891 B, rx dropped 0 (ring) 3 (MAC), arp replies 0, isr max 3096 cycles
+heap: peak 42124 B (wolfSSL allocations), 265 allocs; stack peak 2128 B
+=== PQC DTLS 1.3 client FAILED ===
+
+firmware finished (error)
+--- server ---
+dtls_server: listening on udp/11111, certs /Users/nikhilpothuganti/Desktop/pqc-dtls/certs/neg/rogue, 1 KEM group(s)
+
+[conn 0] client 192.168.1.50:11112
+[conn 0] handshake FAILED: -313 (received alert fatal error)
+--- capture: 16 UDP datagrams in /Users/nikhilpothuganti/Desktop/pqc-dtls/scripts/out/dtls.pcap ---

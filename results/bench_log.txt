@@ -1,0 +1,159 @@
+== 2026-11-16 13:21:41  baseline -Os  []  OK
+   handshake 69716730 cyc (wait 9059002) | setup 5686918 | bulk 744 cyc/B | ROM bin 424040 B (text 423980) | heap peak 96893 B | stack 2300 B
+   net: tx 84 pkts/90475 B, rx 41 pkts/10706 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:22:58  -O2  [OPT=-O2]  OK
+   handshake 95513684 cyc (wait 2135399) | setup 13968882 | bulk 704 cyc/B | ROM bin 521576 B (text 521500) | heap peak 96893 B | stack 2524 B
+   net: tx 88 pkts/90651 B, rx 46 pkts/13826 B, rx dropped 0, arp replies 2
+== 2026-11-16 13:24:31  baseline -Os, server -T10  []  OK
+   handshake 58163670 cyc (wait 3130235) | setup 5683183 | bulk 744 cyc/B | ROM bin 424040 B (text 423980) | heap peak 96893 B | stack 2300 B
+   net: tx 69 pkts/80001 B, rx 22 pkts/8741 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:25:32  baseline -Os, server -T10  []  OK
+   handshake 63126493 cyc (wait 4113851) | setup 5686642 | bulk 742 cyc/B | ROM bin 424040 B (text 423980) | heap peak 96893 B | stack 2300 B
+   net: tx 70 pkts/80041 B, rx 22 pkts/8741 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:26:55  AES128-GCM-SHA256, no SHA384/512  []  OK
+   handshake 40011805 cyc (wait 4130880) | setup 5686705 | bulk 584 cyc/B | ROM bin 403408 B (text 403328) | heap peak 96205 B | stack 2300 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:27:57  +GCM_TABLE_4BIT  []  OK
+   handshake 36283811 cyc (wait 4149460) | setup 5825139 | bulk 361 cyc/B | ROM bin 404176 B (text 404096) | heap peak 98253 B | stack 2300 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:30:16  hot: sha3 -O2  []  OK
+   handshake 93674474 cyc (wait 4125607) | setup 13954959 | bulk 360 cyc/B | ROM bin 411472 B (text 411392) | heap peak 98253 B | stack 2396 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 2
+== 2026-11-16 13:31:09  hot: sha3 -O3  [HOT_OPT=-O3]  OK
+   handshake 60797562 cyc (wait 4093270) | setup 14001254 | bulk 367 cyc/B | ROM bin 416912 B (text 416836) | heap peak 98253 B | stack 2396 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:32:02  hot: sha3 aes sha256 -O2  [HOT_OBJS=wolfcrypt/src/sha3.o wolfcrypt/src/aes.o wolfcrypt/src/sha256.o]  OK
+   handshake 59605271 cyc (wait 4092911) | setup 13892044 | bulk 326 cyc/B | ROM bin 419600 B (text 419528) | heap peak 98253 B | stack 2396 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:33:10  sha3 SMALL -Os  [XDEFS=-DWOLFSSL_SHA3_SMALL]  OK
+   handshake 52921184 cyc (wait 4150620) | setup 8151508 | bulk 358 cyc/B | ROM bin 400592 B (text 400536) | heap peak 98253 B | stack 2120 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:33:53  sha3 SMALL -O2  [XDEFS=-DWOLFSSL_SHA3_SMALL HOT_OBJS=wolfcrypt/src/sha3.o]  OK
+   handshake 43088609 cyc (wait 4164693) | setup 9028287 | bulk 359 cyc/B | ROM bin 404944 B (text 404864) | heap peak 98253 B | stack 2160 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:34:34  sha3 BY_SPEC -Os  [XDEFS=-DSHA3_BY_SPEC]  OK
+   handshake 37265043 cyc (wait 4093155) | setup 6013093 | bulk 355 cyc/B | ROM bin 404304 B (text 404196) | heap peak 98253 B | stack 2296 B
+   net: tx 70 pkts/79973 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:35:37  trace  [TRACE=1]  OK
+   handshake 49573719 cyc (wait 3093904) | setup 5720506 | bulk 362 cyc/B | ROM bin 404496 B (text 404384) | heap peak 98253 B | stack 2300 B
+   net: tx 69 pkts/79949 B, rx 22 pkts/8709 B, rx dropped 0, arp replies 1
+== 2026-11-16 13:37:25  ISR word copy + hw drop counter  [TRACE=1]  OK
+   handshake 30745759 cyc (wait 2092225) | setup 5723512 | bulk 362 cyc/B | ROM bin 404688 B (text 404572) | heap peak 98253 B | stack 2300 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1
+== 2026-11-16 13:38:34  tap0 shaped 4mbit  [TRACE=1]  OK
+   handshake 33468937 cyc (wait 1095351) | setup 5719419 | bulk 361 cyc/B | ROM bin 404688 B (text 404572) | heap peak 98253 B | stack 2300 B
+   net: tx 67 pkts/79885 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 4 (MAC), arp replies 1
+== 2026-11-16 13:39:32  tap0 shaped 1mbit  [TRACE=1]  OK
+   handshake 43517592 cyc (wait 1091780) | setup 5719534 | bulk 365 cyc/B | ROM bin 404688 B (text 404572) | heap peak 98253 B | stack 2300 B
+   net: tx 68 pkts/79941 B, rx 23 pkts/8899 B, rx dropped 0 (ring) 6 (MAC), arp replies 1
+== 2026-11-16 13:41:30  no ISR flush, gap ACK 50ms, no IPv6  [TRACE=1]  OK
+   handshake 28982189 cyc (wait 145243) | setup 5787774 | bulk 365 cyc/B | ROM bin 404688 B (text 404628) | heap peak 98253 B | stack 2316 B
+   net: tx 68 pkts/79925 B, rx 23 pkts/8899 B, rx dropped 0 (ring) 4 (MAC), arp replies 1, isr max 2972 cycles
+== 2026-11-16 13:45:54  key: priv-only (expanded) format  [KEY_FILE=client-key-priv.der]  OK
+   handshake 26471070 cyc (wait 199201) | setup 2334116 | bulk 356 cyc/B | ROM bin 404432 B (text 404340) | heap peak 98215 B | stack 2316 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 7262 cycles
+== 2026-11-16 13:48:45  ChaCha20-Poly1305 (AES kept, no GCM)  []  OK
+   handshake 25621260 cyc (wait 191357) | setup 2334478 | bulk 117 cyc/B | ROM bin 405008 B (text 404928) | heap peak 95191 B | stack 2316 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 10 (MAC), arp replies 1, isr max 5569 cycles
+== 2026-11-16 14:00:47  fastmem (wrap memcpy/memset)  []  OK
+   handshake 24628018 cyc (wait 147430) | setup 1726722 | bulk 89 cyc/B | ROM bin 405648 B (text 405544) | heap peak 95191 B | stack 2316 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 7347 cycles
+== 2026-11-16 14:07:56  keccak_rv32 (-Os)  []  OK
+   handshake 27716034 cyc (wait 150694) | setup 1501486 | bulk 87 cyc/B | ROM bin 402832 B (text 402740) | heap peak 95191 B | stack 2308 B
+   net: tx 68 pkts/79925 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 7 (MAC), arp replies 1, isr max 5284 cycles
+== 2026-11-16 14:09:23  phase timing  []  OK
+   handshake 15147794 cyc (wait 146598) | setup 1532418 | bulk 87 cyc/B | ROM bin 404048 B (text 403992) | heap peak 95191 B | stack 2356 B
+   net: tx 64 pkts/77311 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 5555 cycles
+== 2026-11-16 14:11:23  keccak counter  []  OK
+   handshake 23781274 cyc (wait 146855) | setup 1565092 | bulk 87 cyc/B | ROM bin 404240 B (text 404140) | heap peak 95191 B | stack 2356 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 10 (MAC), arp replies 1, isr max 7307 cycles
+== 2026-11-16 14:18:19  SMALL_STACK + _CACHE  []  OK
+   handshake 16866719 cyc (wait 148854) | setup 1546309 | bulk 87 cyc/B | ROM bin 405008 B (text 404904) | heap peak 95819 B | stack 2356 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 5492 cycles
+== 2026-11-16 14:18:44  no SMALL_STACK  [XDEFS=-DFW_NO_SMALL_STACK]  OK
+   handshake 17087093 cyc (wait 148460) | setup 1388843 | bulk 83 cyc/B | ROM bin 401296 B (text 401204) | heap peak 94031 B | stack 6948 B
+   net: tx 67 pkts/79869 B, rx 21 pkts/8519 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 5616 cycles
+== 2026-11-16 14:19:32  heap peak attribution  []  OK
+   handshake 15248328 cyc (wait 156798) | setup 1507435 | bulk 87 cyc/B | ROM bin 405528 B (text 405448) | heap peak 95819 B | stack 2356 B
+   net: tx 64 pkts/77311 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 7262 cycles
+== 2026-11-16 14:23:35  -ffunction-sections -fdata-sections  []  OK
+   handshake 23419592 cyc (wait 151043) | setup 1411075 | bulk 89 cyc/B | ROM bin 306112 B (text 306036) | heap peak 95819 B | stack 2360 B
+   net: tx 68 pkts/79925 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 6 (MAC), arp replies 1, isr max 5362 cycles
+== 2026-11-16 14:24:23  release config: no DEBUG_WOLFSSL, 512/44 only, NO_MAKE_KEY  []  FAILED
+   handshake  cyc (wait ) | setup  | bulk  cyc/B | ROM bin 257608 B (text 257512) | heap peak 22264 B | stack 1464 B
+   net: tx 0 pkts/0 B, rx 0 pkts/0 B, rx dropped 0 (ring) 1 (MAC), arp replies 0, isr max 466 cycles
+== 2026-11-16 14:24:58  debug group failure  []  FAILED
+   handshake  cyc (wait ) | setup  | bulk  cyc/B | ROM bin 257672 B (text 257592) | heap peak 22264 B | stack 1464 B
+   net: tx 0 pkts/0 B, rx 0 pkts/0 B, rx dropped 0 (ring) 1 (MAC), arp replies 0, isr max 465 cycles
+== 2026-11-16 14:25:45  release config (ML-KEM-1024 kept: wolfSSL bug)  []  OK
+   handshake 23095501 cyc (wait 160641) | setup 1391633 | bulk 86 cyc/B | ROM bin 260368 B (text 260300) | heap peak 95563 B | stack 2280 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 8 (MAC), arp replies 1, isr max 5301 cycles
+== 2026-11-16 14:26:48  heapdump  [HEAPDUMP=1]  OK
+   handshake 17822818 cyc (wait 148539) | setup 1494466 | bulk 88 cyc/B | ROM bin 261008 B (text 260944) | heap peak 95563 B | stack 2344 B
+   net: tx 67 pkts/79885 B, rx 21 pkts/8519 B, rx dropped 0 (ring) 7 (MAC), arp replies 1, isr max 8113 cycles
+== 2026-11-16 14:27:54  RX ring 16, NO_SESSION_CACHE  []  OK
+   handshake 19041052 cyc (wait 156571) | setup 1394541 | bulk 86 cyc/B | ROM bin 259664 B (text 259540) | heap peak 95563 B | stack 2280 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 10 (MAC), arp replies 1, isr max 7262 cycles
+== 2026-11-16 14:28:46  LOWMEM: SIGN_SMALL_MEM+PRECALC_A  [XDEFS=-DWOLFSSL_DILITHIUM_SIGN_SMALL_MEM -DWOLFSSL_DILITHIUM_SIGN_SMALL_MEM_PRECALC_A]  OK
+   handshake 34220487 cyc (wait 155611) | setup 1370933 | bulk 85 cyc/B | ROM bin 260688 B (text 260564) | heap peak 72660 B | stack 2312 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 7262 cycles
+== 2026-11-16 14:29:09  LOWMEM: SIGN_SMALL_MEM + VERIFY_SMALL_MEM  [XDEFS=-DWOLFSSL_DILITHIUM_SIGN_SMALL_MEM -DWOLFSSL_DILITHIUM_VERIFY_SMALL_MEM]  OK
+   handshake 14186817 cyc (wait 155386) | setup 1377405 | bulk 87 cyc/B | ROM bin 259920 B (text 259800) | heap peak 60683 B | stack 2280 B
+   net: tx 64 pkts/77311 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 10 (MAC), arp replies 1, isr max 5492 cycles
+== 2026-11-16 14:30:14  heapdump sizes  [HEAPDUMP=1]  OK
+   handshake 16225571 cyc (wait 144174) | setup 1415982 | bulk 86 cyc/B | ROM bin 261328 B (text 261260) | heap peak 95563 B | stack 2280 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 5599 cycles
+== 2026-11-16 14:31:06  VERIFY_SMALL_MEM + ASSIGN_KEY  []  FAILED
+   handshake  cyc (wait ) | setup  | bulk  cyc/B | ROM bin 260368 B (text 260244) | heap peak 43420 B | stack 2280 B
+   net: tx 5 pkts/2107 B, rx 11 pkts/7891 B, rx dropped 0 (ring) 9 (MAC), arp replies 0, isr max 5577 cycles
+== 2026-11-16 14:31:47  VERIFY_SMALL_MEM (default)  []  OK
+   handshake 17060321 cyc (wait 152694) | setup 1387493 | bulk 94 cyc/B | ROM bin 260496 B (text 260424) | heap peak 95563 B | stack 2280 B
+   net: tx 67 pkts/79869 B, rx 21 pkts/8519 B, rx dropped 0 (ring) 7 (MAC), arp replies 1, isr max 5653 cycles
+== 2026-11-16 14:37:34  pinned server cert (TRUST_PEER_CERT)  []  OK
+   handshake 52179866 cyc (wait 35926525) | setup 1494342 | bulk 87 cyc/B | ROM bin 267216 B (text 267100) | heap peak 98135 B | stack 2280 B
+   net: tx 68 pkts/79909 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 7 (MAC), arp replies 1, isr max 7322 cycles
+== 2026-11-16 14:38:19  pinned + trace  [TRACE=1]  OK
+   handshake 50431374 cyc (wait 36754033) | setup 1499230 | bulk 93 cyc/B | ROM bin 267408 B (text 267324) | heap peak 98135 B | stack 2280 B
+   net: tx 67 pkts/79869 B, rx 21 pkts/8519 B, rx dropped 0 (ring) 9 (MAC), arp replies 1, isr max 5615 cycles
+== 2026-11-16 14:39:21  pinned + netem 2mbit link model  [TRACE=1]  OK
+   handshake 12400962 cyc (wait 92956) | setup 1499157 | bulk 93 cyc/B | ROM bin 267408 B (text 267324) | heap peak 98135 B | stack 2280 B
+   net: tx 63 pkts/77303 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3198 cycles
+== 2026-11-16 14:40:03  pinned+netem run 1  []  OK
+   handshake 12006682 cyc (wait 43691) | setup 1494196 | bulk 87 cyc/B | ROM bin 267216 B (text 267100) | heap peak 98135 B | stack 2280 B
+   net: tx 62 pkts/77135 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 1 (MAC), arp replies 1, isr max 3142 cycles
+== 2026-11-16 14:40:28  pinned+netem run 2  []  OK
+   handshake 11391630 cyc (wait 110732) | setup 1494827 | bulk 87 cyc/B | ROM bin 267216 B (text 267100) | heap peak 98135 B | stack 2280 B
+   net: tx 63 pkts/77303 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 3 (MAC), arp replies 1, isr max 3092 cycles
+== 2026-11-16 14:40:57  pinned+netem run 3  []  OK
+   handshake 22801556 cyc (wait 100091) | setup 1494559 | bulk 87 cyc/B | ROM bin 267216 B (text 267100) | heap peak 98135 B | stack 2280 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3142 cycles
+== 2026-11-16 15:00:01  sign pad 8 + iota-fold keccak, run 1  []  OK
+   handshake 10838591 cyc (wait 47967) | setup 1488602 | bulk 87 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 62 pkts/77135 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 2922 cycles
+== 2026-11-16 15:00:28  sign pad 8 + iota-fold keccak, run 2  []  OK
+   handshake 15076531 cyc (wait 96801) | setup 1489186 | bulk 87 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3122 cycles
+== 2026-11-16 15:00:55  sign pad 8 + iota-fold keccak, run 3  []  OK
+   handshake 16943955 cyc (wait 109281) | setup 1489358 | bulk 87 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3070 cycles
+== 2026-11-16 15:06:26  hot_text.ld placement, run 1  []  OK
+   handshake 11255127 cyc (wait 114647) | setup 1505737 | bulk 86 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 63 pkts/77303 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3090 cycles
+== 2026-11-16 15:06:52  hot_text.ld placement, run 2  []  OK
+   handshake 14320638 cyc (wait 108184) | setup 1488804 | bulk 86 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 66 pkts/79861 B, rx 21 pkts/8519 B, rx dropped 0 (ring) 3 (MAC), arp replies 1, isr max 3097 cycles
+== 2026-11-16 15:07:17  hot_text.ld placement, run 3  []  OK
+   handshake 11223637 cyc (wait 96087) | setup 1488412 | bulk 86 cyc/B | ROM bin 267216 B (text 267092) | heap peak 98455 B | stack 2264 B
+   net: tx 63 pkts/77303 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 6 (MAC), arp replies 1, isr max 3097 cycles
+== 2026-11-16 15:40:43  PQRV keccak + PQRV NTT, run 1  []  OK
+   handshake 11262928 cyc (wait 43174) | setup 1456496 | bulk 86 cyc/B | ROM bin 271504 B (text 267128) | heap peak 98455 B | stack 2128 B
+   net: tx 62 pkts/77135 B, rx 17 pkts/8375 B, rx dropped 0 (ring) 1 (MAC), arp replies 1, isr max 3264 cycles
+== 2026-11-16 15:41:10  PQRV keccak + PQRV NTT, run 2  []  OK
+   handshake 17625196 cyc (wait 112317) | setup 1456544 | bulk 86 cyc/B | ROM bin 271504 B (text 267128) | heap peak 98455 B | stack 2128 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3034 cycles
+== 2026-11-16 15:41:38  PQRV keccak + PQRV NTT, run 3  []  OK
+   handshake 18678044 cyc (wait 112905) | setup 1456496 | bulk 86 cyc/B | ROM bin 271504 B (text 267128) | heap peak 98455 B | stack 2128 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3187 cycles
+== 2026-11-16 17:16:34  repo layout check (dirs moved into repo)  []  OK
+   handshake 15403752 cyc (wait 102754) | setup 1456317 | bulk 86 cyc/B | ROM bin 271504 B (text 267128) | heap peak 98455 B | stack 2128 B
+   net: tx 67 pkts/79901 B, rx 22 pkts/8709 B, rx dropped 0 (ring) 2 (MAC), arp replies 1, isr max 3263 cycles

@@ -1,0 +1,23 @@
+runs: 25, successful: 25
+ROM (boot.bin): 271504 B  (.text+.rodata 267128 B, .data 4352 B), .bss 26296 B
+
+metric                  median        mean         p90         min         max
+setup                  1456140     1456836     1456496     1455616     1472275
+handshake             12437788    13594705    15904230    10448674    35739129
+wait                    102156       94300      112027       46648      113587
+sign                   4426491     5532319     7753333     2796183    27422241
+verify                 2515727     2456746     2516098     2220101     2516200
+kem_keygen              566042      566738      566398      565518      582177
+kem_decaps              879208      879006      879931      868562      895661
+keccak                     320         356         432         264        1076
+bulk_cyc_per_B              86          86          86          86          86
+heap_peak                98455       98455       98455       98455       98455
+stack_peak                2128        2128        2128        2128        2128
+tx_pkts                     63          64          67          62          67
+rx_pkts                     17          19          22          17          22
+mac_drops                    2           2           3           1           6
+setup+handshake       13894284    15051540    17360374    11905170    37195147
+
+at 100 MHz (cycles / 100e6):
+  handshake median 124.4 ms, full session (setup+handshake) median 138.9 ms
+  bulk throughput 1136 KiB/s (86 cycles/B)

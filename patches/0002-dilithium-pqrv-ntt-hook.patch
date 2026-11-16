@@ -1,0 +1,53 @@
+--- a/Constraint_Env_Sim/boot/wolfcrypt/src/dilithium.c
++++ b/Constraint_Env_Sim/boot/wolfcrypt/src/dilithium.c
+@@ -5549,6 +5549,17 @@
+     !defined(WOLFSSL_DILITHIUM_NO_VERIFY) || \
+     (!defined(WOLFSSL_DILITHIUM_NO_MAKE) && defined(WOLFSSL_DILITHIUM_SMALL))
+ 
++/* PQC-DTLS patch: DILITHIUM_NTT_PQRV routes the forward/inverse NTT to the
++ * PQRV RV32IM single-issue assembly (pqrv_dilithium_ntt_rv32im.S, TCHES
++ * 2025, MIT): 15.1k/15.9k cycles vs ~35k/39k for the reference C on
++ * VexRiscv. Same algorithm and constants (Montgomery, f = 41978). */
++#ifdef DILITHIUM_NTT_PQRV
++extern int32_t zetas_ntt_8l_rv32im[512];
++extern int32_t zetas_intt_8l_rv32im[512];
++extern void ntt_8l_rv32im(int32_t *r, int32_t *zetas);
++extern void intt_8l_rv32im(int32_t *r, int32_t *zetas);
++#endif
++
+ /* One iteration of Number-Theoretic Transform.
+  *
+  * @param [in] len  Length of sequence.
+@@ -5574,6 +5585,10 @@
+  */
+ static void dilithium_ntt_c(sword32* r)
+ {
++#ifdef DILITHIUM_NTT_PQRV
++    ntt_8l_rv32im((int32_t*)r, zetas_ntt_8l_rv32im);
++    return;
++#endif
+ #ifdef WOLFSSL_DILITHIUM_SMALL
+     unsigned int len;
+     unsigned int k;
+@@ -6040,6 +6055,10 @@
+  */
+ static void dilithium_ntt_small_c(sword32* r)
+ {
++#ifdef DILITHIUM_NTT_PQRV
++    ntt_8l_rv32im((int32_t*)r, zetas_ntt_8l_rv32im);
++    return;
++#endif
+     unsigned int k;
+     unsigned int j;
+ #ifdef WOLFSSL_DILITHIUM_NO_LARGE_CODE
+@@ -6514,6 +6533,10 @@
+  */
+ static void dilithium_invntt_c(sword32* r)
+ {
++#ifdef DILITHIUM_NTT_PQRV
++    intt_8l_rv32im((int32_t*)r, zetas_intt_8l_rv32im);
++    return;
++#endif
+ #ifdef WOLFSSL_DILITHIUM_SMALL
+     unsigned int len;
+     unsigned int k;

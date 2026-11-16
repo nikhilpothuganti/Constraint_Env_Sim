@@ -1,0 +1,26 @@
+5	192.168.1.50	925	Client Hello
+6	192.168.1.100	152	Hello Retry Request
+7	192.168.1.50	998	Client Hello
+8	192.168.1.100	855	Server Hello
+9	192.168.1.100	44	Encrypted Extensions
+10	192.168.1.100	83	Certificate Request
+11	192.168.1.100	1391	Certificate (Fragment)
+12	192.168.1.100	1391	Certificate (Fragment)
+13	192.168.1.100	1391	Certificate (Fragment)
+14	192.168.1.100	90	Certificate (Reassembled)
+15	192.168.1.100	1391	Certificate Verify (Fragment)
+16	192.168.1.100	1117	Certificate Verify (Reassembled)
+17	192.168.1.100	74	Finished
+18	192.168.1.50	176	Acknowledgement
+19	192.168.1.100	83	Certificate Request
+20	192.168.1.50	1463	Certificate (Fragment)
+21	192.168.1.50	1463	Certificate (Fragment)
+22	192.168.1.50	1296	Certificate (Reassembled)
+23	192.168.1.50	1463	Certificate Verify (Fragment)
+24	192.168.1.50	1045	Certificate Verify (Reassembled)
+25	192.168.1.50	74	Finished
+26	192.168.1.100	128	Acknowledgement
+27	192.168.1.100	198	New Session Ticket
+28	192.168.1.50	50	Application Data
+29	192.168.1.100	50	Application Data
+30	192.168.1.50	48	Acknowledgement
